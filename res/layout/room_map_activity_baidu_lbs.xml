@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/user_or_room_address_TextView"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:text="您当前的位置: 定位中..."
+        android:textSize="14dp" />
+
+    <RelativeLayout
+        android:id="@+id/mapview_and_freebook_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/free_book_toolbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <include layout="@layout/free_book_toolbar" />
+        </LinearLayout>
+
+        <com.baidu.mapapi.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/free_book_toolbar_layout"
+            android:clickable="true" />
+    </RelativeLayout>
+
+</LinearLayout>

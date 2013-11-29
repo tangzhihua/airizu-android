@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 所有窗口 titlebar 的高度 -->
+    <dimen name="dimen_for_titlebar_height">50dp</dimen>
+    <!-- 所有窗口 toolsbar 的高度(第一层界面的tabhost/房源列表页面的toolsbar/免费预订toolsbar -->
+    <dimen name="dimen_for_toolsbar_height">50dp</dimen>
+    <!-- 推荐城市首页 - 推荐城市listitem 高度 -->
+    <dimen name="dimen_for_recommend_city_listitem_height">270dp</dimen>
+
+
+</resources>

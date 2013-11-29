@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 房间概述 - 基本信息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/baikuang"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <!-- 第 1 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- 房屋类型 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/property_type_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="房屋类型 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/property_type_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 租住方式 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/privacy_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="租住方式 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/privacy_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 2 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 卫浴类型 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rest_room_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="卫浴类型 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/rest_room_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 卫生间数 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/bath_room_number_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="卫生间数 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/bath_room_number_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 3 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 卧室数量 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/bed_room_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="卧室数量 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/bed_room_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 可住人数 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/accommodates_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="可住人数 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/accommodates_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 4 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 房间床型 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/bed_type_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="房间床型 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/bed_type_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 房间床数 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/beds_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="房间床数 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/beds_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 5 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 建筑面积 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/size_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="建筑面积 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/size_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 退房时间 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/checkout_time_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="退房时间 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/checkout_time_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 6 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 最多天数 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/max_nights_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="最多天数 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/max_nights_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 最少天数 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/min_nights_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="最少天数 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/min_nights_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 7 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 提供发票 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tickets_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="提供发票 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tickets_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- 退订条款 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/cancellation_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="退订条款 : "
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/cancellation_content_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="加载中..."
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第 8 行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 清洁服务类型 -->
+
+        <TextView
+            android:id="@+id/clean_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="清洁服务类型 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/clean_content_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="加载中..."
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>

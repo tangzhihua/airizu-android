@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 如果是true，当被点击时显示该图片，如果是false没被按下时显示默认。 -->
+    <item android:drawable="@drawable/short_button_pressed" android:state_pressed="true"/>
+    <!-- true，获得焦点时显示；false，没获得焦点显示默认。 -->
+    <!-- <item android:drawable="@drawable/bt_up_w" android:state_focused="true"/> -->
+    <!-- true，当被选择时显示该图片；false，当未被选择时显示该图片。 -->
+    <!-- <item android:drawable="@drawable/bt_up_w" android:state_selected="true"/> -->
+    <!-- true，当该组件能使用时显示该图片；false，当该组件不能使用时显示该图片。 -->
+    <!-- <item android:drawable="@drawable/bt_up_w" android:state_enabled="true"/> -->
+    <!-- true，当此activity获得焦点在最前面时显示该图片；false，当没在最前面时显示该图片。 -->
+    <!-- <item android:drawable="@drawable/bt_up_w" android:state_window_focused="true"/> -->
+    <!-- 默认图片 -->
+    <item android:drawable="@drawable/short_button_highlight_default"/>
+
+</selector>

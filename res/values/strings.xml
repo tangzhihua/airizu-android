@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">爱日租</string>
+    <string name="recommend">推荐</string>
+    <string name="search">搜索</string>
+    <string name="vicinity">附近</string>
+    <string name="account">账号</string>
+    <string name="choose_city">选择城市</string>
+    <string name="search_room_number">房间搜索</string>
+    <string name="logon">登录</string>
+    <string name="about_info">爱日租(www.airizu.com)是中国首家日租、短租房在线预订网站，于2011年上线运营，隶属于北京维艾必立信息技术有限公司旗下品牌。爱日租网站创立之初就致力于为用户打造在旅途中“随时随地租个家”的服务理念。
+	</string>
+    <string name="money_mark">￥</string>
+    <string name="please_select_the_checkin_time">请选择入住时间</string>
+    <string name="please_select_the_checkout_time">请选择退房时间</string>
+    <string name="wait_confirm">待确认</string>
+    <string name="wait_pay">待支付</string>
+    <string name="wait_live">待入住</string>
+    <string name="wait_comment">待评价</string>
+    <string name="has_ended">已完成</string>
+    <string name="data_loading_hint">数据加载中...</string>
+    <string name="data_loading_error_hint">数据加载中错误</string>
+    <string name="no_valid_data_hint">没有有效数据</string>
+    <string name="last_line_hint">已经是最后一行</string>
+    <string name="network_access_failure_hint">网络访问失败</string>
+    <string name="network_access_timeout_hint">网络访问超时</string>
+    <string name="positioning">定位中...</string>
+    <string name="basic_information">基本信息</string>
+    <string name="supporting_facilities">配套设施</string>
+    <string name="room_overview">房间概况</string>
+    <string name="trading_rules">交易规则</string>
+    <string name="use_rules">使用规则</string>
+</resources>

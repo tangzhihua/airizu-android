@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="TextHighlighted">#FFFF8C00</color>
+    <color name="TextLinked">#FF4682B4</color>
+    <color name="TextNormal">#FF696969</color>
+    <color name="TextGray">#FFDCDCDC</color>
+
+    <drawable name="red">#f00</drawable>
+    <drawable name="green">#0f0</drawable>
+    <drawable name="gray">#ccc</drawable>
+</resources>

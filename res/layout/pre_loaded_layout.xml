@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 订单详情 - 默认界面(真正的界面, 会在获取订单状态后, 再进行加载) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar_for_preloaded_ui_TitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 错误提示信息 TextView -->
+
+        <TextView
+            android:id="@+id/info_label_for_preloaded_ui_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="数据加载中..."
+            android:textColor="@color/TextNormal"
+            android:textSize="30dp"
+            android:visibility="gone" />
+
+        <!-- 功能按钮 -->
+
+        <Button
+            android:id="@+id/function_button_for_preloaded_ui_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新请求数据"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- 免费预订 工具条 -->
+
+    <LinearLayout
+        android:id="@+id/free_book_toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/free_book_toolbar" />
+    </LinearLayout>
+
+    <!-- 房间图片 -->
+
+    <RelativeLayout
+        android:id="@+id/room_phone_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/free_book_toolbar_layout"
+        android:layout_below="@id/title_bar"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:padding="5dp" >
+
+        <Gallery
+            android:id="@+id/room_photo_Gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/white"
+            android:gravity="center" />
+
+        <cn.airizu.custom_control.page_change_light.PageChangeLight
+            android:id="@+id/page_change_light_PageChangeLight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+</RelativeLayout>

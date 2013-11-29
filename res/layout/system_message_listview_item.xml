@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 系统消息列表的item -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:background="@android:color/white"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/icon_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/laba" />
+
+    <ImageView
+        android:id="@+id/detail_icon_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/jtr_hov" />
+
+    <TextView
+        android:id="@+id/title_label_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/icon_ImageView"
+        android:text="系统消息"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+
+    <!-- 消息日期 -->
+    <TextView
+        android:id="@+id/message_date_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/detail_icon_ImageView"
+        android:text="8888-88-88"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16dp" />
+
+    <!-- 消息内容 -->
+    <cn.airizu.custom_control.textview_ellipse_end_fixed.TextViewEllipseEndFixed
+        android:id="@+id/message_text_TextView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/title_label_TextView"
+        android:layout_below="@id/title_label_TextView"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/detail_icon_ImageView"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14dp" />
+
+</RelativeLayout>

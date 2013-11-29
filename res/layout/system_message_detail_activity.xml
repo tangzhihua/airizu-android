@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 系统消息列表的item -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/icon_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/laba" />
+
+        <TextView
+            android:id="@+id/title_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/icon_ImageView"
+            android:text="系统消息"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <!-- 消息日期 -->
+
+        <TextView
+            android:id="@+id/message_date_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="8888-88-88"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line" />
+
+    <!-- 消息内容 -->
+
+    <TextView
+        android:id="@+id/message_text_TextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14dp" />
+
+</LinearLayout>

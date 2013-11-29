@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 订单详情 - 默认界面(真正的界面, 会在获取订单状态后, 再进行加载) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 错误提示信息 -->
+    <TextView
+        android:id="@+id/error_message_prompts_TextView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:text="数据加载中..."
+        android:textColor="@color/TextNormal"
+        android:textSize="30dp" />
+
+</LinearLayout>

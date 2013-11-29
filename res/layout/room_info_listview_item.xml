@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 房源列表的item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp" >
+
+        <!-- 房间图片 -->
+
+        <RelativeLayout
+            android:id="@+id/room_image_layout"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/room_image_bg_ImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/result_item_bg" />
+
+            <ImageView
+                android:id="@+id/room_content_ImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/middle_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/room_content_details_ImageView"
+            android:layout_toRightOf="@id/room_image_layout" >
+
+            <!-- 已验证图标/房间标题 -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- 100%验证的icon图片 -->
+
+                <ImageView
+                    android:id="@+id/room_check_ImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/fnav_yan"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/room_title_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="我的家, 在东北松花江上, 哪里有, 无数的大豆高粱!" />
+            </LinearLayout>
+
+            <!-- 与地标距离/出租方式/限住人数 -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <!-- 房源距离 -->
+
+                <TextView
+                    android:id="@+id/room_check_distance_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone" 
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="1000km" />
+
+                <!-- 租住方式 : icon图标 -->
+
+                <ImageView
+                    android:id="@+id/room_rental_way_name_ImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/fnav_33" />
+
+                <!-- 租住方式 : 名称 -->
+
+                <TextView
+                    android:id="@+id/room_rental_way_name_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="单间合租" />
+
+                <!-- 限住人数 -->
+
+                <TextView
+                    android:id="@+id/room_check_amount_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="限住100人" />
+            </LinearLayout>
+
+            <!-- 评论数量/已预订次数/价钱 -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+
+                <!-- 评论数量  : 图标 -->
+
+                <ImageView
+                    android:id="@+id/room_comment_ImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/fnav_11" />
+
+                <!-- 评论数量  : 文字 -->
+
+                <TextView
+                    android:id="@+id/room_review_count_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/room_comment_ImageView"
+                    android:textColor="#FF000000" 
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="10000000"/>
+
+                <!-- 已预订数量  : 图标 -->
+
+                <ImageView
+                    android:id="@+id/room_reserve_ImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/fnav_22" />
+
+                <!-- 已预订数量  : 文字 -->
+
+                <TextView
+                    android:id="@+id/room_scheduled_total_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000" 
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="已预订1000000晚"/>
+
+                <!-- 房间价格 -->
+
+                <TextView
+                    android:id="@+id/room_price_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#FF1662F3" 
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="3000000"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- ">" 图标 -->
+
+        <ImageView
+            android:id="@+id/room_content_details_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jtr_hov" />
+    </RelativeLayout>
+
+</LinearLayout>

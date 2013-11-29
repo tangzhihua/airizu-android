@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dimension 尺寸 -->
+<resources>
+
+    <!-- titlebar - titlebar中的文字最大size -->
+    <dimen name="dimen_for_titlebar_title_max_font_size">30sp</dimen>
+    <!-- titlebar - titlebar中的文字最小size -->
+    <dimen name="dimen_for_titlebar_title_min_font_size">15sp</dimen>
+
+</resources>

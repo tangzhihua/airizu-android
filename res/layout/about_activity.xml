@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/about_info"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextNormal" />
+
+            <Button
+                android:id="@+id/mark_Button"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_long_button_bg_highlight"
+                android:text="给爱日租打分吧"
+                android:textColor="@drawable/selector_button_text_color_highlight"
+                android:textSize="@dimen/FontSizeForNormalMenu" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

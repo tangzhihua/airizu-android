@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 订单详情 - 待支付界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 标题 -->
+
+    <include layout="@layout/user_order_detail_title" />
+
+    <!-- 订单状态 -->
+
+    <include layout="@layout/user_order_detail_order_state" />
+
+    <!-- 去支付 按钮 -->
+
+    <Button
+        android:id="@+id/to_pay_Button"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_long_button_bg_highlight"
+        android:text="去支付"
+        android:textColor="@drawable/selector_button_text_color_highlight"
+        android:textSize="@dimen/FontSizeForNormalMenu" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/function_Button"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_long_button_bg_normal"
+            android:text="按钮"
+            android:textColor="@drawable/selector_button_text_color_normal"
+            android:textSize="@dimen/FontSizeForNormalMenu" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/function_Button"
+            android:layout_alignParentTop="true"
+            android:scrollbars="vertical" >
+
+            <!-- 订单详情 -->
+
+            <include layout="@layout/user_order_detail_order_info_main_body" />
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

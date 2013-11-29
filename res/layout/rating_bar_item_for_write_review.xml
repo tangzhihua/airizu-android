@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/white" >
+
+    <!-- 星级滑块控件 -->
+
+    <RatingBar
+        android:id="@+id/score_RatingBar"
+        style="@style/RatingBarStyleForStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:numStars="5"
+        android:rating="5.0"
+        android:stepSize="1.0" />
+
+    <!-- 评论项名称 -->
+
+    <TextView
+        android:id="@+id/review_item_name_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/score_RatingBar"
+        android:text="测试"
+        android:textColor="@color/TextNormal"
+        android:textSize="20dp" />
+
+    <!-- 左括号 -->
+
+    <TextView
+        android:id="@+id/left_parenthesis_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/score_RatingBar"
+        android:text="("
+        android:textColor="@color/TextNormal"
+        android:textSize="20dp" />
+
+    <!-- 评论项具体得分 -->
+
+    <TextView
+        android:id="@+id/review_item_score_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/left_parenthesis_TextView"
+        android:text="5"
+        android:textColor="@color/TextNormal"
+        android:textSize="20dp" />
+
+    <!-- 右括号 -->
+
+    <TextView
+        android:id="@+id/right_parenthesis_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/review_item_score_TextView"
+        android:text=")"
+        android:textColor="@color/TextNormal"
+        android:textSize="20dp" />
+
+</RelativeLayout>

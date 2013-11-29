@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/footer_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/search_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/sousuo" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autocom"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/search_ImageView"
+            android:completionThreshold="1"
+            android:hint="城市名称/区号"
+            android:singleLine="true"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/gps_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:id="@+id/gps_title_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="GPS定位当前所在城市"
+            android:textColor="@color/TextNormal" />
+
+        <TextView
+            android:id="@+id/gps_value_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/gps_title_TextView"
+            android:text="定位中.."
+            android:textColor="@color/TextHighlighted" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/jtr_hov" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/search_city_ListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#FFFFFFFF" />
+
+        <LinearLayout
+            android:layout_width="50px"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grey2"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/search_city_letter_ListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

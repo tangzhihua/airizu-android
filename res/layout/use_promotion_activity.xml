@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFFFF"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <!-- 订单总额 -->
+
+            <LinearLayout
+                android:id="@+id/order_total_price_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_total_price_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="订单总额 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/order_total_price_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/TextHighlighted" />
+            </LinearLayout>
+
+            <!-- 预付定金 -->
+
+            <LinearLayout
+                android:id="@+id/down_payment_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/down_payment_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="预付定金 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/down_payment_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/TextHighlighted" />
+            </LinearLayout>
+
+            <!-- 线下支付 -->
+
+            <LinearLayout
+                android:id="@+id/line_payment_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/line_payment_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="线下支付 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/line_payment_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/TextHighlighted" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/xuxian" />
+
+            <!-- 积分冲抵模块 -->
+
+            <LinearLayout
+                android:id="@+id/credits_to_offset_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/credits_to_offset_label_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="积分冲抵 : "
+                        android:textColor="@color/TextNormal"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/credits_slider_body_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <SeekBar
+                            android:id="@+id/credits_SeekBar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentTop="true"
+                            android:maxHeight="10dp" />
+                        <!-- android:progressDrawable="@drawable/seekbar_style" -->
+                        <!-- android:thumb="@drawable/seekbar_thumb_style" -->
+
+                        <RelativeLayout
+                            android:id="@+id/seekbar_value_body_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@id/credits_SeekBar"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/seekbar_min_value_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/seekbar_max_value_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="100"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/credits_to_offset_rule_body_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/credits_to_offset_rule_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提示: "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/credits_to_offset_rule_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="你的账户目前有40000积分, 本次预订最多可以冲抵154元房费."
+                            android:textColor="@color/TextNormal"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 折扣券模块 -->
+
+            <RelativeLayout
+                android:id="@+id/discount_coupons_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/discount_coupons_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="使用折扣 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <Button
+                    android:id="@+id/check_discount_coupons_Button"
+                    android:layout_width="62dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/selector_short_button_bg_highlight"
+                    android:text="未验证"
+                    android:textColor="@drawable/selector_button_text_color_highlight"
+                    android:textSize="15sp" />
+
+                <!-- android:numeric 属性如果设置成 integer的话, 有的手机就只有数字, 连 完成 按钮都没有 -->
+
+                <EditText
+                    android:id="@+id/discount_coupons_content_EditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/check_discount_coupons_Button"
+                    android:layout_toRightOf="@id/discount_coupons_label_TextView"
+                    android:background="@drawable/o1"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="请输入折扣券代码"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberSigned"
+                    android:numeric="signed"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <!-- 提交按钮 -->
+
+            <Button
+                android:id="@+id/submit_Button"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_long_button_bg_highlight"
+                android:text="确定"
+                android:textColor="@drawable/selector_button_text_color_highlight"
+                android:textSize="@dimen/FontSizeForNormalMenu" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

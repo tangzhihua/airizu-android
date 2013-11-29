@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.airizu.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <!-- 爱日租 application -->
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".MyApplication" >
+
+        <!-- 应用主Activity, 欢迎界面 ! -->
+        <activity
+            android:label="@string/app_name"
+            android:name=".AirizuFirstActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 下载新版apk界面 -->
+        <activity
+            android:name=".DownloadNewApkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 第一次启动软件时, 提示给用户的软件使用帮助界面 -->
+        <activity
+            android:name=".first_login_help.FirstLoginHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 一级界面的tabhost导航Activity, 一级界面包括("推荐"/"搜索"/"附近"/"账号") -->
+        <activity
+            android:launchMode="singleTask"
+            android:name=".main_navigation.MainNavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 一级界面 - "推荐" -->
+        <activity
+            android:name=".main_navigation.tab_item.A_RecommendMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 一级界面 - "搜索" -->
+        <activity
+            android:name=".main_navigation.tab_item.B_SearchMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 一级界面 - "附近" -->
+        <activity
+            android:name=".main_navigation.tab_item.C_RoomListMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 一级界面 - "账户" -->
+        <activity
+            android:name=".main_navigation.tab_item.D_AccountMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 关于界面 -->
+        <activity
+            android:name=".about.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 帮助界面 -->
+        <activity
+            android:name=".help.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 城市列表界面 -->
+        <activity
+            android:name=".city_list.CityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- 免费预订 - 确认入住日期界面 -->
+        <activity
+            android:name=".free_book_confirm_checkin_time.FreebookConfirmCheckinTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 免费预订 - 确认入住信息界面 -->
+        <activity
+            android:name=".free_book_confirm_order_info.FreebookConfirmOrderInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".logon.LogonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 密码找回界面 -->
+        <activity
+            android:name=".password_forget.PasswordForgetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 注册界面 -->
+        <activity
+            android:name=".register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 写评论界面 -->
+        <activity
+            android:name=".write_review.WriteReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 房间详情 - 基本信息界面 -->
+        <activity
+            android:name=".room_detail_basic_information.RoomDetailOfBasicInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 房间详情 - 房间概述界面 -->
+        <activity
+            android:name=".room_detail_overview.RoomDetailOfOverviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 房间详情 - 房间图片界面 -->
+        <activity
+            android:name=".room_detail_photo.RoomDetailPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 房间详情 - 房间相关评论界面 -->
+        <activity
+            android:name=".room_detail_tenant_reviews.RoomDetailTenantReviewsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 房间详情 - -->
+        <activity
+            android:name=".room_detail_traffic_map.RoomDetailTrafficMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 房间筛选界面 -->
+        <activity
+            android:name=".room_filter.RoomFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 地图界面 (包括房源列表中的 "地图" 和 房间详情中的 "房间地图") -->
+        <activity
+            android:name=".room_map.RoomMapActivityByBaiduLBS"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 直接搜索房间编号界面 -->
+        <activity
+            android:name=".search_room_by_number.SearchRoomByNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 系统消息详情界面 -->
+        <activity
+            android:name=".system_message_detail.SystemMessageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 系统消息首页 -->
+        <activity
+            android:name=".system_message_index.SystemMessageIndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 使用优惠界面 -->
+        <activity
+            android:name=".use_promotion_activity.UsePromotionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 用户订单首页 : "我的订单" -->
+        <activity
+            android:name=".user_order_main.UserOrderMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 用户订单详情界面 -->
+        <activity
+            android:name=".user_order_detail.UserOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+        <!-- 用户信息界面 -->
+        <activity
+            android:name=".user_information.UserInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
+
+        <!-- 注册一个 BroadcastReceiver, 其 intent-filter 为 android.intent.action.BOOT_COMPLETED（用于接收系统启动完毕的 Broadcast） -->
+        <!-- 这是开机自启动的方式 -->
+        <receiver android:name=".AirizuBootReceiver" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 如果有需要用到的 service ，则都要在这里做相应的配置 -->
+        <service android:name=".PreLoadedDataService" >
+        </service>
+    </application>
+
+    <!-- 访问Internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 查看网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 定位相关权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 接受系统启动完毕的 Broadcast 的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 摄像机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 安装APK -->
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <!-- 电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--  -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+</manifest>

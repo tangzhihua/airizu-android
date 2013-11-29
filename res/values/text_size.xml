@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="SmallFont">15dp</dimen>
+    <dimen name="NormalFont">20dp</dimen>
+    <dimen name="LargeFont">25dp</dimen>
+    <dimen name="FontSizeForNormalMenu">20dp</dimen>
+
+</resources>

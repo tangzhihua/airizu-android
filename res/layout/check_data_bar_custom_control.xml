@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 房源列表界面中, "入住时间" "退房时间" "房源数量" -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/check_data_RelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fnav_bg" >
+
+    <!-- "入住时间" -->
+
+    <LinearLayout
+        android:id="@+id/checkin_data_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/checkin_date_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/fnav1" />
+
+        <TextView
+            android:id="@+id/checkin_date_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:text="2012-12-24"
+            android:textColor="#FF000000" />
+    </LinearLayout>
+
+    <!-- "退房时间" -->
+
+    <LinearLayout
+        android:id="@+id/checkout_data_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/checkin_data_RelativeLayout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/checkout_date_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fnav2" />
+
+        <TextView
+            android:id="@+id/checkout_date_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:text="2012-12-24"
+            android:textColor="#FF000000" />
+    </LinearLayout>
+
+    <!-- "房源数量" -->
+
+    <LinearLayout
+        android:id="@+id/room_amount_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/room_amount_1_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共"
+            android:textColor="#FF000000" />
+
+        <TextView
+            android:id="@+id/room_amount_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FF1662F3" />
+
+        <TextView
+            android:id="@+id/room_amount_2_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="套房间"
+            android:textColor="#FF000000" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/check_data_RelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fnav_bg"
+    android:gravity="center" 
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/checkin_data_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" >
+
+        <ImageView
+            android:id="@+id/checkin_date_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5px"
+            android:background="@drawable/fnav1" />
+
+        <TextView
+            android:id="@+id/checkin_date_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkin_date_ImageView"
+            android:textColor="#FF000000"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkout_data_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checkin_data_RelativeLayout">
+
+        <ImageView
+            android:id="@+id/checkout_date_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5px"
+            android:background="@drawable/fnav2" />
+
+        <TextView
+            android:id="@+id/checkout_date_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkout_date_ImageView"
+            android:textColor="#FF000000"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/room_amount_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignParentRight="true" 
+        >
+        <TextView
+            android:id="@+id/room_amount_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+         	android:paddingTop="5px"
+         	android:textSize="22px"
+            android:textColor="#FF1662F3"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

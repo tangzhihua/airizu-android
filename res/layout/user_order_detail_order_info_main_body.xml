@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- 分隔线 -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/xuxian" />
+
+    <!-- 房间图片 -->
+
+    <RelativeLayout
+        android:id="@+id/room_detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" >
+
+        <!-- 房间图片 -->
+
+        <RelativeLayout
+            android:id="@+id/room_image_layout"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/room_image_bg_ImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/result_item_bg" />
+
+            <ImageView
+                android:id="@+id/room_photo_ImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <!-- ">" 图标 -->
+
+        <ImageView
+            android:id="@+id/room_content_details_icon_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jtr_hov" />
+
+        <!-- 房间标题/房间位置 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/room_content_details_icon_ImageView"
+            android:layout_toRightOf="@id/room_image_layout" >
+
+            <!-- 房间标题 -->
+
+            <TextView
+                android:id="@+id/room_title_text_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text="加载中..."
+                android:textColor="@color/TextNormal"
+                android:textSize="14dp" />
+
+            <!-- 房间地址 -->
+
+            <TextView
+                android:id="@+id/room_address_text_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="加载中..."
+                android:textColor="@color/TextGray"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/xuxian" />
+
+    <!-- 订单编号 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/order_number_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="订单编号 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/order_number_text_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <!-- 入住时间 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/checkin_date_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="入住时间 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/checkin_date_text_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <!-- 退房时间 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/checkout_date_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="退房时间 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/checkout_date_text_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <!-- 入住人数 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/occupancy_count_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="入住人数 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/occupancy_count_text_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/xuxian" />
+
+    <!-- 预付定金 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/down_payment_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="预付定金 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/down_payment_text_TextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/TextHighlighted" />
+
+        <TextView
+            android:id="@+id/down_payment_hint_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="( 房东确认后支付 )"
+            android:textColor="@color/TextGray" />
+    </LinearLayout>
+
+    <!-- 线下支付 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/line_payment_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="线下支付 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/line_payment_text_TextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/TextHighlighted" />
+
+        <TextView
+            android:id="@+id/line_payment_hint_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="( 入住后支付房东 )"
+            android:textColor="@color/TextGray" />
+    </LinearLayout>
+
+    <!-- 订单总额 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/order_total_price_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="订单总额 : "
+            android:textColor="@color/TextNormal"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/order_total_price_text_TextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="加载中..."
+            android:textColor="@color/TextHighlighted" />
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/xuxian" />
+
+</LinearLayout>

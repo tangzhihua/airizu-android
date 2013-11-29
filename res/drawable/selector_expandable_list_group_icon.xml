@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 打开状态 -->
+    <item android:drawable="@drawable/js" android:drawingCacheQuality="auto" android:state_expanded="false"/>
+    <!-- 收起状态 -->
+    <item android:drawable="@drawable/jx" android:drawingCacheQuality="auto" android:state_expanded="true"/>
+
+</selector>

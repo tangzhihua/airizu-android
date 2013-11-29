@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Activity的界面风格 -->
+    <style name="ActivityTheme" parent="@android:style/Theme.Light.NoTitleBar" />
+
+    <!-- View弹出时的动画, 用于弹出列表时的动画 -->
+    <style mce_bogus="1" name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_in</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_out</item>
+    </style>
+
+    <!-- SeekBar的风格 -->
+    <style name="SeekBarStyle" parent="@android:style/Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar</item>
+    </style>
+
+    <!-- 星级滑块 : 星星风格 -->
+    <!-- 不知道为什么这里星星的大小老是调不好, 现在只能写死31dp和具体图片的大小绑定了 -->
+    <style name="RatingBarStyleForStar" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">31dp</item>
+        <item name="android:minHeight">31dp</item>
+        <item name="android:progressDrawable">@drawable/style_rating_bar_for_star</item>
+    </style>
+
+    <!-- 星级滑块 : 矩形风格 -->
+    <style name="RatingBarStyleForRect" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxWidth">38dp</item>
+        <item name="android:maxHeight">15dp</item>
+        <item name="android:minWidth">38dp</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:progressDrawable">@drawable/style_rating_bar_for_rect</item>
+    </style>
+
+    <!--  -->
+    <style name="StreetNameButtonInRecommendCityActivity">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/FontSizeForNormalMenu</item>
+        <item name="android:background">@drawable/selector_button_bg_for_recommend_street</item>
+    </style>
+
+</resources>

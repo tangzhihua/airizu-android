@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- 用户发表的评论 -->
+
+    <RelativeLayout
+        android:id="@+id/user_review_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xiaokuang"
+        android:padding="5dp" >
+
+        <!-- 用户姓名 -->
+
+        <TextView
+            android:id="@+id/user_name_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="用户名"
+            android:textColor="@color/TextHighlighted"
+            android:textSize="14dp" />
+
+        <!-- 用户评论发表时间 -->
+
+        <TextView
+            android:id="@+id/user_review_time_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="0000-00-00"
+            android:textColor="@color/TextNormal"
+            android:textSize="14dp" />
+
+        <!-- note : 这里一定要以上一个控件作为 "锚点" 如果使用 user_name_TextView作为锚点就会定位失败 -->
+        <!-- 用户评论内容 -->
+
+        <TextView
+            android:id="@+id/user_review_TextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_review_time_TextView"
+            android:text="TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+            android:textColor="@color/TextNormal"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <!-- 房东回复 -->
+
+    <RelativeLayout
+        android:id="@+id/host_review_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/host_name_label_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="房东回复:"
+            android:textColor="@color/TextHighlighted"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/host_review_time_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="0000-00-00"
+            android:textColor="@color/TextNormal"
+            android:textSize="14dp" />
+
+        <!-- note : 这里一定要以上一个控件作为 "锚点" 如果使用 user_name_TextView作为锚点就会定位失败 -->
+
+        <TextView
+            android:id="@+id/host_name_TextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/host_review_time_TextView"
+            android:text="TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+            android:textColor="@color/TextNormal"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</LinearLayout>

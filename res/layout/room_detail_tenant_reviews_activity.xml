@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- 免费预订 工具条 -->
+
+    <LinearLayout
+        android:id="@+id/free_book_toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/free_book_toolbar" />
+    </LinearLayout>
+
+    <!--  -->
+
+    <RelativeLayout
+        android:id="@+id/body_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/free_book_toolbar_layout"
+        android:layout_below="@id/title_bar"
+        android:padding="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/average_and_comment_total_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <!-- 平均分 label -->
+
+            <TextView
+                android:id="@+id/average_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="平均评分:"
+                android:textColor="@color/TextNormal"
+                android:textSize="16dp" />
+
+            <!-- 平均分  text -->
+
+            <TextView
+                android:id="@+id/average_text_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/average_label_TextView"
+                android:gravity="center_vertical"
+                android:text="0.0"
+                android:textColor="@color/TextHighlighted"
+                android:textSize="18dp" />
+
+            <!-- 平均分总分 -->
+
+            <TextView
+                android:id="@+id/average_total_text_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/average_text_TextView"
+                android:gravity="center_vertical"
+                android:text="/5分"
+                android:textColor="@color/TextNormal"
+                android:textSize="16dp" />
+
+            <!-- 评论总数label -->
+
+            <TextView
+                android:id="@+id/comment_label_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:text="条评论"
+                android:textColor="@color/TextNormal"
+                android:textSize="16dp" />
+
+            <!-- 评论总数 text -->
+
+            <TextView
+                android:id="@+id/comment_text_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/comment_label_TextView"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/TextNormal"
+                android:textSize="16dp" />
+
+            <!-- 评论总数 icon -->
+
+            <ImageView
+                android:id="@+id/comment_icon_TextView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/comment_text_TextView"
+                android:scaleType="fitXY"
+                android:src="@drawable/p2" />
+
+            <!-- 分割直线 -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/line" />
+        </RelativeLayout>
+
+        <!-- 星级滑块 : 用于评分 -->
+
+        <cn.airizu.custom_control.ratingbar.CustomRatingBar
+            android:id="@+id/score_CustomRatingBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/average_and_comment_total_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/list_state_hint_TextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="数据加载中..."
+            android:textSize="30dp"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/room_review_ListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/list_state_hint_TextView"
+            android:layout_below="@id/score_CustomRatingBar"
+            android:divider="@android:color/white"
+            android:dividerHeight="10dp" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

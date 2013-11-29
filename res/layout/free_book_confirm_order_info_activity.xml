@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- "1.选择入住时间   -> 2.确认订单" -->
+
+    <RelativeLayout
+        android:id="@+id/page_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" >
+
+        <!-- "箭头" 图标 -->
+
+        <ImageView
+            android:id="@+id/arrowhead_ImageView"
+            android:layout_width="37dp"
+            android:layout_height="34dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/jiantou" />
+
+        <!-- 1.选择入住时间 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/arrowhead_ImageView"
+            android:text="1.选择入住时间"
+            android:textColor="@color/TextGray"
+            android:textSize="15.0dip" />
+
+        <!-- 2.确认订单 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/arrowhead_ImageView"
+            android:text="2.确认订单"
+            android:textColor="@color/TextHighlighted"
+            android:textSize="15.0dip" />
+
+        <!-- 分隔线 图片 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/arrowhead_ImageView"
+            android:scaleType="fitXY"
+            android:src="@drawable/line" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFFFF"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <!-- 入住时间 -->
+
+            <LinearLayout
+                android:id="@+id/checkin_date_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/checkin_date_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="入住时间 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/checkin_date_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/Black" />
+            </LinearLayout>
+
+            <!-- 退房时间 -->
+
+            <LinearLayout
+                android:id="@+id/checkout_date_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/checkout_date_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="退房时间 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/checkout_date_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/Black" />
+            </LinearLayout>
+
+            <!-- 入住人数 -->
+
+            <LinearLayout
+                android:id="@+id/occupancy_count_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/occupancy_count_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="入住人数 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/occupancy_count_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/Black" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/xuxian" />
+
+            <!-- 订单总额 -->
+
+            <LinearLayout
+                android:id="@+id/order_total_price_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_total_price_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="订单总额 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/order_total_price_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/TextHighlighted" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <!-- 已经使用了 优惠 的提示标志 -->
+
+                    <LinearLayout
+                        android:id="@+id/already_use_the_promotions_body_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/dui_2"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text=" 已优惠"
+                            android:textSize="12dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <!-- 跳转到优惠界面的按钮 -->
+
+                    <Button
+                        android:id="@+id/promotion_Button"
+                        android:layout_width="70dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/sdf"
+                        android:gravity="center_vertical"
+                        android:text=" 使用优惠"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 预付定金 -->
+
+            <LinearLayout
+                android:id="@+id/down_payment_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/down_payment_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="预付定金 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/down_payment_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/TextHighlighted" />
+
+                <TextView
+                    android:id="@+id/down_payment_hint_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="( 房东确认后支付 )"
+                    android:textColor="@color/TextGray" />
+            </LinearLayout>
+
+            <!-- 线下支付 -->
+
+            <LinearLayout
+                android:id="@+id/line_payment_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/line_payment_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="线下支付 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/line_payment_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="加载中..."
+                    android:textColor="@color/TextHighlighted" />
+
+                <TextView
+                    android:id="@+id/line_payment_hint_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="( 入住后支付房东 )"
+                    android:textColor="@color/TextGray" />
+            </LinearLayout>
+
+            <!-- 租客姓名 -->
+
+            <LinearLayout
+                android:id="@+id/tenant_name_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tenant_name_label_TextView"
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="租客姓名"
+                    android:textColor="@color/TextNormal"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/tenant_name_EditText"
+                    android:layout_width="202dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="#00000000"
+                    android:hint="请输入租客姓名"
+                    android:maxLength="20"
+                    android:singleLine="true" >
+                </EditText>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/dividing_line_ImageView"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/line" />
+
+            <!-- 手机号码 -->
+
+            <LinearLayout
+                android:id="@+id/phone_number_body_layout"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_3" >
+
+                <TextView
+                    android:id="@+id/phone_number_label_TextView"
+                    android:layout_width="90dp"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:text="手机号码"
+                    android:textColor="@color/TextNormal"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/phone_number_EditText"
+                    android:layout_width="202dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="#00000000"
+                    android:hint="请输入租客手机号码"
+                    android:maxWidth="210dp"
+                    android:phoneNumber="true"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <!-- 确认订单信息, 并且同意了服务条款 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/confirm_order_info_CheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:hint="我已经确认订单信息并同意"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/terms_of_service_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="爱日租服务条款"
+                    android:textColor="@color/TextHighlighted"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <!-- 提交按钮 -->
+
+            <Button
+                android:id="@+id/submit_Button"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_long_button_bg_highlight"
+                android:text="提交我的订单"
+                android:textColor="@drawable/selector_button_text_color_highlight"
+                android:textSize="@dimen/FontSizeForNormalMenu" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

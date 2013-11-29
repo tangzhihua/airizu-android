@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 星级滑块 : 用于评分 -->
+
+    <cn.airizu.custom_control.ratingbar.CustomRatingBar
+        android:id="@+id/score_CustomRatingBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" />
+
+    <!-- 输入评论内容的文本编辑框 -->
+
+    <EditText
+        android:id="@+id/review_EditText"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/k"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="评价房间, 可以获得积分"
+        android:padding="5dp"
+        android:textSize="16dp" />
+
+    <!-- 提交评论按钮 -->
+    <Button
+        android:id="@+id/submit_review_Button"
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_long_button_bg_highlight"
+        android:text="提交评论"
+        android:textColor="@drawable/selector_button_text_color_highlight"
+        android:textSize="20.0dip" />
+
+</LinearLayout>

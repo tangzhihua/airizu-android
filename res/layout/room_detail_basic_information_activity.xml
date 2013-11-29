@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 房间详情 - 基础信息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- 免费预订 工具条 -->
+
+    <LinearLayout
+        android:id="@+id/free_book_toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/free_book_toolbar" />
+    </LinearLayout>
+
+    <!-- 内容主体 -->
+
+    <ScrollView
+        android:id="@+id/body_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/free_book_toolbar_layout"
+        android:layout_below="@id/title_bar"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/sbg"
+                android:orientation="vertical" >
+
+                <!-- 房间图片 -->
+
+                <FrameLayout
+                    android:id="@+id/room_phone_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp" >
+
+                    <!-- 图片画廊 -->
+
+                    <Gallery
+                        android:id="@+id/room_photo_Gallery"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+
+                    <!-- 房间单价 -->
+
+                    <TextView
+                        android:id="@+id/room_price_on_the_gallery_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/content_mark"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+                </FrameLayout>
+
+                <cn.airizu.custom_control.page_change_light.PageChangeLight
+                    android:id="@+id/page_change_light_PageChangeLight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <!-- 房间标题 -->
+
+            <TextView
+                android:id="@+id/room_title_TextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="加载中..."
+                android:textColor="@color/TextHighlighted" />
+            <!-- 房间地址 + 房间地图 -->
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/room_address_map_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/butdt" />
+
+                <TextView
+                    android:id="@+id/room_address_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/room_address_map_Button"
+                    android:text="加载中..."
+                    android:textColor="@color/TextNormal" />
+            </RelativeLayout>
+            <!-- 房间编号 + 曾被预定次数 -->
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/room_number_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="房间编号 : "
+                    android:textColor="@color/TextNormal" />
+
+                <TextView
+                    android:id="@+id/room_number_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加载中..."
+                    android:textColor="@color/TextNormal" />
+
+                <TextView
+                    android:id="@+id/room_scheduled_label_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="曾被预定 : "
+                    android:textColor="@color/TextNormal" />
+
+                <TextView
+                    android:id="@+id/room_scheduled_content_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加载中..."
+                    android:textColor="@color/TextNormal" />
+            </LinearLayout>
+
+            <!-- 房间详情 - 标题部分 -->
+
+            <RelativeLayout
+                android:id="@+id/room_detail_click_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sss" >
+
+                <TextView
+                    android:id="@+id/room_detail_title_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:clickable="false"
+                    android:text="房间详情"
+                    android:textColor="@color/TextNormal"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:clickable="false"
+                    android:src="@drawable/jtr_hov" />
+            </RelativeLayout>
+
+            <!-- 房间详情 - 内容部分 -->
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/x1"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <!-- 第 1 行 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <!-- 房屋类型 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/property_type_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="房屋类型 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/property_type_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- 租住方式 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/privacy_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="租住方式 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/privacy_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 第 2 行 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 卫生间数 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/bath_room_number_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="卫生间数 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/bath_room_number_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- 卧室数量 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/bed_room_number_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="卧室数量 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/bed_room_number_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 第 3 行 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 可住人数 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/accommodates_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="可住人数 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/accommodates_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- 房间床型 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/bed_type_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="房间床型 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/bed_type_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 第 4 行 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 房间床数 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/beds_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="房间床数 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/beds_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- 建筑面积 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/construction_area_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="建筑面积 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/construction_area_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 第 5 行 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 退房时间 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/checkout_time_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="退房时间 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/checkout_time_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- 最少天数 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/min_nights_label_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="最少天数 : "
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/min_nights_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="加载中..."
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 租客点评 -->
+
+            <LinearLayout
+                android:id="@+id/tenant_reviews_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 租客点评 - 标题部分 -->
+
+                <RelativeLayout
+                    android:id="@+id/tenant_reviews_click_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sss" >
+
+                    <TextView
+                        android:id="@+id/tenant_reviews_title_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:clickable="false"
+                        android:text="租客点评"
+                        android:textColor="@color/TextNormal"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:clickable="false"
+                        android:src="@drawable/jtr_hov" />
+                </RelativeLayout>
+
+                <!-- 租客点评 - 内容部分 -->
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/x1"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <!-- 房屋平均分 -->
+
+                        <TextView
+                            android:id="@+id/average_content_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="加载中..."
+                            android:textColor="@color/red"
+                            android:textSize="14dp" />
+
+                        <!-- 评分最大值 -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/average_content_TextView"
+                            android:text="/5分"
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <!-- 该房屋的评论数量 -->
+
+                        <TextView
+                            android:id="@+id/number_of_arguments_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="加载中..."
+                            android:textColor="@color/TextNormal"
+                            android:textSize="14dp" />
+
+                        <!-- 该房屋的评论数量 左边的 icon -->
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/number_of_arguments_TextView"
+                            android:src="@drawable/p2" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/line" />
+
+                    <!-- 该房屋的最新一条评论 -->
+
+                    <TextView
+                        android:id="@+id/latest_reviews_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="加载中..."
+                        android:textColor="@color/TextNormal"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 房间特色 -->
+
+            <LinearLayout
+                android:id="@+id/room_features_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 房间特色 - 标题部分 -->
+
+                <RelativeLayout
+                    android:id="@+id/room_features_click_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sss" >
+
+                    <TextView
+                        android:id="@+id/room_features_title_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:clickable="false"
+                        android:text="房间特色"
+                        android:textColor="@color/TextNormal"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <!-- 房间特色 - 内容部分 -->
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/x1"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <!-- 100%验证 -->
+
+                    <RelativeLayout
+                        android:id="@+id/hundred_percent_verification_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/hundred_percent_verification_icon_ImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/yanzheng" />
+
+                        <TextView
+                            android:id="@+id/hundred_percent_verification_hint_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/hundred_percent_verification_icon_ImageView"
+                            android:text="经过现场考核, 值得入住"
+                            android:textColor="@color/TextNormal"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@id/hundred_percent_verification_icon_ImageView"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/line" />
+                    </RelativeLayout>
+
+                    <!-- 特价 -->
+
+                    <RelativeLayout
+                        android:id="@+id/special_offer_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/special_offer_icon_ImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/tejia" />
+
+                        <TextView
+                            android:id="@+id/special_offer_hint_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/special_offer_icon_ImageView"
+                            android:text="享受折扣, 限时抢购"
+                            android:textColor="@color/TextNormal"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@id/special_offer_icon_ImageView"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/line" />
+                    </RelativeLayout>
+
+                    <!-- 速定 -->
+
+                    <RelativeLayout
+                        android:id="@+id/speed_stable_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/speed_stable_ImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/suding" />
+
+                        <TextView
+                            android:id="@+id/speed_stable_hint_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/speed_stable_ImageView"
+                            android:text="无需房东确认, 支付即可入住"
+                            android:textColor="@color/TextNormal"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 爱日租广告 -->
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/jingqi" />
+
+                <TextView
+                    android:id="@+id/introduction_hint_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="房源价格低于周边酒店30%~50%, 70000多套房源覆盖80个城市各个角落, 专业质检团队"
+                    android:textColor="@color/TextNormal"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/line" />
+
+            <!-- 客服电话 -->
+
+            <LinearLayout
+                android:id="@+id/free_customer_service_telephone_click_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/dianhua" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="免费客服电话 : "
+                    android:textColor="@color/TextNormal"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="400-890-200"
+                    android:textColor="@color/TextHighlighted"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="8:00-20:00"
+                    android:textColor="@color/TextNormal"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 订单详情 - 待入住界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 标题 -->
+
+    <include layout="@layout/user_order_detail_title" />
+
+    <!-- 订单状态 -->
+
+    <include layout="@layout/user_order_detail_order_state" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/function_Button"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_long_button_bg_normal"
+            android:text="按钮"
+            android:textColor="@drawable/selector_button_text_color_normal"
+            android:textSize="@dimen/FontSizeForNormalMenu" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/function_Button"
+            android:layout_alignParentTop="true"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 房东信息 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"
+                    android:orientation="vertical" >
+
+                    <!-- 房东姓名 -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="房东姓名 : "
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/landlord_name_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="唐志华"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <!-- 房东手机 -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="房东电话 : "
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/landlord_phone_TextView"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:autoLink="phone"
+                            android:text="18600021847"
+                            android:textColor="@color/DodgerBlue" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/sphone" />
+                    </LinearLayout>
+
+                    <!-- 备用电话 -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="备用电话 : "
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/alternate_phone_TextView"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:autoLink="phone"
+                            android:text="0429-78787878"
+                            android:textColor="@color/DodgerBlue" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/tel" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 订单详情 -->
+
+                <include layout="@layout/user_order_detail_order_info_main_body" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

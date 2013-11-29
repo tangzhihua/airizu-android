@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_promo_slot_image_view_height">108.0dip</dimen>
+    <dimen name="home_subheader_right_text_size">14.0sp</dimen>
+    <dimen name="home_promo_slot_top_bottom_margin">2.0dip</dimen>
+    <dimen name="home_recs_link_text_size">16.0dip</dimen>
+    <dimen name="home_shoveler_item_text_size">12.0dip</dimen>
+    <dimen name="home_shoveler_view_bottom_fading_edge_width">12.0dip</dimen>
+    <dimen name="home_shoveler_view_top_fading_edge_width">16.0dip</dimen>
+    <dimen name="home_view_shoveler_view_height">205.0dip</dimen>
+    <dimen name="home_view_shoveler_view_thumbnail_max_dimension">125.0dip</dimen>
+</resources>

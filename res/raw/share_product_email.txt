@@ -1,0 +1,10 @@
+<a href="PRODUCT_URL"><font face="Sans-serif" size="3"><b>PRODUCT_NAME</b></font></a>
+<br/>
+<font face="Sans-serif" size = "2" color= "#000000"> PRODUCT_MAKER</font>
+<br/>
+<font face="Sans-serif" size = "2" color= "#000000"> LIST_PRICE_TITLE <strike>PRODUCT_LISTING_PRICE</strike></font>
+<br />
+<font face="Sans-serif" size = "2" color= "#000000"> SELLING_PRICE_TITLE </font> <font face="Sans-serif" size = "2" color= "#800000">PRODUCT_PRICE</font>
+<br />
+<br />
+<font face="Sans-serif" size = "2" color= "#000000"> SENT_USING</font>      

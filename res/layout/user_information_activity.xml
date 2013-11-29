@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- TitleBar -->
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/body_frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <!-- 上传用户头像 -->
+
+                <RelativeLayout
+                    android:id="@+id/user_photo_click_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/kuang" >
+
+                    <RelativeLayout
+                        android:id="@+id/user_photo_layout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp" >
+
+                        <!-- 头像图片背景 -->
+
+                        <ImageView
+                            android:id="@+id/user_photo_bg_ImageView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic" />
+
+                        <!-- 头像图片 -->
+
+                        <ImageView
+                            android:id="@+id/user_photo_content_ImageView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/tx"
+                            android:scaleType="fitXY" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/user_photo_layout"
+                        android:text="上传头像"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/jtr_hov" />
+                </RelativeLayout>
+
+                <!-- 用户名 -->
+
+                <LinearLayout
+                    android:id="@+id/user_name_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/user_name_TextView"
+                        android:layout_width="90dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="用户名"
+                        android:textColor="@color/TextNormal"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/user_name_EditText"
+                        android:layout_width="190dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@android:color/white"
+                        android:hint="请输入用户名"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:textColor="@color/TextNormal" >
+                    </EditText>
+                </LinearLayout>
+
+                <!-- 性别 -->
+
+                <LinearLayout
+                    android:id="@+id/phone_number_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/phone_number_TextView"
+                        android:layout_width="90dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="性别"
+                        android:textColor="@color/TextNormal"
+                        android:textSize="18dp" />
+
+                    <RadioGroup
+                        android:id="@+id/sex_RadioGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/men_RadioButton"
+                            android:text="男"
+                            android:textColor="@color/gray" />
+
+                        <RadioButton
+                            android:id="@+id/women_RadioButton"
+                            android:layout_marginLeft="30dp"
+                            android:text="女"
+                            android:textColor="@color/gray" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 手机 -->
+
+                <LinearLayout
+                    android:id="@+id/phone_laytou"
+                    android:layout_width="300dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/bg_1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="手机"
+                        android:textColor="@color/TextNormal"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/phone_verified_ImageView"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/dui_1"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/user_phone_TextView"
+                        android:layout_width="190dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/TextNormal" >
+                    </TextView>
+                </LinearLayout>
+
+                <!-- 邮箱 -->
+
+                <LinearLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_3"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="邮箱"
+                        android:textColor="@color/TextNormal"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/email_verified_ImageView"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/dui_1"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/user_email_TextView"
+                        android:layout_width="190dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/TextNormal" >
+                    </TextView>
+                </LinearLayout>
+                <!-- 提示 -->
+
+                <LinearLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="修改手机邮箱, 了解积分详情, 请登录爱日租网站"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="www.airizu.com"
+                        android:textColor="@color/TextHighlighted"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!-- 注册 -->
+
+                <Button
+                    android:id="@+id/submit_Button"
+                    android:layout_width="300dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_long_button_bg_highlight"
+                    android:text="确定"
+                    android:textColor="@drawable/selector_button_text_color_highlight"
+                    android:textSize="@dimen/FontSizeForNormalMenu" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

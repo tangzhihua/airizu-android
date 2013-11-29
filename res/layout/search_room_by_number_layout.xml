@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+    <cn.airizu.custom_control.titlebar.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/room_number_searche_EditText"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/but_bg"
+            android:hint="请输入房间编号"
+            android:numeric="integer"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/room_number_searche_Button"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_long_button_bg_highlight"
+            android:text="直接搜索房间编号"
+            android:textColor="@drawable/selector_button_text_color_highlight"
+            android:textSize="@dimen/FontSizeForNormalMenu" />
+    </LinearLayout>
+
+</LinearLayout>
